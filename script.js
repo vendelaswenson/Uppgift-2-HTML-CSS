@@ -1,13 +1,19 @@
 const hamburgerBar = document.querySelector(".ham-container");
 const navBar = document.querySelector(".bar");
-let active = true;
+const sections = document.querySelectorAll(".sec");
+const logo = document.querySelector("#logo");
+let active = false;
 
 hamburgerBar.addEventListener("click", () => {
   if (!active) {
     active = true;
-    navBar.classList(".add");
+    navBar.classList.add("barActive");
+    for (let i = 0; i < sections.length; i++)
+      sections[i].style.display = "initial";
   } else {
     active = false;
-    navBar.classList(".remove");
+    navBar.classList.remove("barActive");
+    for (let i = 0; i < sections.length; i++)
+      sections[i].style.display = "none";
   }
 });

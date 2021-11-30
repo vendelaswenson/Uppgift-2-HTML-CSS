@@ -7,9 +7,18 @@ header,
 footer {
   height: 110px;
   width: 100%;
-  font-size: 30px;
   background-color: rgb(146, 177, 153);
+}
+
+header {
+  font-size: 30px;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +28,7 @@ main {
   padding: 60px;
   margin: 60px;
   background-color: rgb(243, 240, 240);
-  height: 1500px;
+  height: 90%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -34,36 +43,47 @@ main {
 }
 
 img {
+  margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
+  box-shadow: 10px 5px 5px black;
 }
 
 .choose-art {
-  margin-left: 1%;
-  position: -webkit-sticky;
-  position: sticky;
   top: 20px;
   width: 7%;
 }
 .bar {
+  position: fixed;
+  top: 35px;
+  right: 0;
+  width: 50px;
   display: flex;
   flex-direction: column;
+  z-index: 0;
 }
 
-.bar > a {
-  margin-bottom: 10px;
+.sec {
+  margin-top: 80px;
+  margin-left: 10px;
   display: none;
+  font-size: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
 }
+
 .ham-container {
   width: 30px;
   height: 30px;
-  position: absolute;
+  position: fixed;
   right: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 .ham-container > .linje {
+  position: absolute;
   background: black;
   height: 4px;
   width: 100%;
@@ -83,4 +103,28 @@ img {
 }
 .ham-container::after {
   bottom: 5px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.barActive {
+  height: 600px;
+  width: 300px;
+  background: rgb(231, 240, 185);
+}
+
+.link {
+  display: initial;
+  margin-left: 10px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  display: none;
 }
