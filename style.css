@@ -2,16 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: rgb(243, 240, 240);
 }
 header,
 footer {
   height: 110px;
   width: 100%;
   background-color: rgb(146, 177, 153);
+  box-shadow: 5px 5px 5px 5px rgb(173, 165, 165);
 }
 
 header {
-  font-size: 30px;
+  font-size: 20px;
   color: white;
   display: flex;
   justify-content: center;
@@ -27,7 +29,7 @@ footer {
 main {
   padding: 60px;
   margin: 60px;
-  background-color: rgb(243, 240, 240);
+  background-color: rgb(255, 255, 255);
   height: 90%;
   display: flex;
   justify-content: center;
@@ -39,14 +41,14 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 120px;
+  margin-top: 70px;
 }
 
 img {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 10px;
-  box-shadow: 10px 5px 5px black;
+  box-shadow: 10px 5px 5px rgb(173, 165, 165);
 }
 
 .choose-art {
@@ -61,15 +63,19 @@ img {
   display: flex;
   flex-direction: column;
   z-index: 0;
+  border-radius: 10px;
+  border: solid 0.3em;
+  border-color: rgb(145, 139, 139);
 }
 
 .sec {
   margin-top: 80px;
-  margin-left: 10px;
+  margin-left: 15px;
   display: none;
   font-size: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: black;
+  color: white;
+  background-color: rgb(146, 177, 153);
 }
 
 .ham-container {
@@ -81,6 +87,7 @@ img {
   justify-content: center;
   align-items: center;
   z-index: 1;
+  background-color: rgb(146, 177, 153);
 }
 .ham-container > .linje {
   position: absolute;
@@ -107,24 +114,77 @@ img {
 
 h1 {
   margin-bottom: 20px;
+  background-color: rgb(146, 177, 153);
 }
 
 .barActive {
   height: 600px;
   width: 300px;
-  background: rgb(231, 240, 185);
+  background-color: rgb(146, 177, 153);
 }
 
 .link {
   display: initial;
   margin-left: 10px;
+  background-color: rgb(146, 177, 153);
 }
 
 .links {
   display: flex;
   flex-direction: row;
+  background-color: rgb(146, 177, 153);
 }
 
-.logo {
+#logo {
+  margin-left: 40%;
+  margin-top: 40%;
   display: none;
+}
+
+.p-link {
+  background-color: rgb(146, 177, 153);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(206, 206, 206);
+  }
+
+  header,
+  h1,
+  footer,
+  .p-link,
+  .links,
+  .link {
+    background-color: wheat;
+  }
+
+  h1 {
+    color: black;
+  }
+
+  article,
+  p,
+  h2,
+  .img-container,
+  section {
+    background-color: rgb(238, 240, 228);
+  }
+
+  .bar {
+    width: 37%;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
 }
