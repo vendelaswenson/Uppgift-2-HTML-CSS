@@ -11,6 +11,10 @@
   background-color: rgb(243, 240, 240);
 }
 
+body {
+  background-color: rgb(219, 221, 210);
+}
+
 .ham-container {
   @include flex(center, center);
   width: 30px;
@@ -27,23 +31,74 @@
     width: 100%;
   }
 }
-
-header,
-footer {
-  height: 110px;
+.ham-container::before,
+.ham-container::after {
+  content: "";
+  position: absolute;
   width: 100%;
-  background-color: rgb(146, 177, 153);
-  box-shadow: 5px 5px 5px 5px rgb(173, 165, 165);
+  height: 4px;
+  background: black;
 }
 
 header {
   @include flex(center, center);
   font-size: 20px;
   color: white;
+
+  .ham-container::before {
+    top: 5px;
+  }
+  .ham-container::after {
+    bottom: 5px;
+  }
 }
 
 footer {
   @include flex(center, center);
+}
+
+header,
+footer {
+  height: 110px;
+  width: 100%;
+  box-shadow: 5px 5px 5px 5px rgb(173, 165, 165);
+}
+
+header,
+h1,
+footer,
+.p-link,
+.links,
+.link {
+  background-color: rgb(209, 231, 208);
+}
+
+.choose-art {
+  top: 20px;
+  width: 7%;
+
+  .bar {
+    position: fixed;
+    top: 35px;
+    right: 0;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    border-radius: 10px;
+    border: solid 0.3em;
+    border-color: rgb(145, 139, 139);
+
+    .sec {
+      margin-top: 80px;
+      margin-left: 15px;
+      display: none;
+      font-size: 100%;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      background-color: rgb(146, 177, 153);
+    }
+  }
 }
 
 main {
@@ -69,75 +124,80 @@ main {
   }
 }
 
-.choose-art {
-  top: 20px;
-  width: 7%;
-
-  .bar {
-    position: fixed;
-    top: 35px;
-    right: 0;
-    width: 50px;
-    display: flex;
-    flex-direction: column;
-    z-index: 0;
-    border-radius: 10px;
-    border: solid 0.3em;
-    border-color: rgb(145, 139, 139);
-
-    .sec {
-      margin-top: 80px;
-      margin-left: 15px;
-      display: none;
-      font-size: 100%;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
-      background-color: rgb(146, 177, 153);
-    }
-  }
-}
-
-.ham-container::before,
-.ham-container::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background: black;
-}
-
-.ham-container::before {
-  top: 5px;
-}
-.ham-container::after {
-  bottom: 5px;
-}
-
 h1 {
+  color: black;
   margin-bottom: 20px;
-  background-color: rgb(146, 177, 153);
   font-family: "Prata", Verdana, serif;
+}
+
+h2 {
+  font-size: 19px;
+}
+
+.sec {
+  color: black;
+  background-color: rgb(238, 240, 228);
+}
+
+.element {
+  background-color: rgb(238, 240, 228);
 }
 
 h2 {
   font-family: "Spectral", Verdana, serif;
 }
 
-.barActive {
-  height: 600px;
-  width: 300px;
-  background-color: rgb(146, 177, 153);
+h3 {
+  font-size: 90%;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .link {
   display: initial;
   margin-left: 10px;
-  background-color: rgb(146, 177, 153);
+  background-color: rgb(209, 231, 208);
 }
 
 .links {
   display: flex;
   flex-direction: row;
+  background-color: rgb(209, 231, 208);
+}
+
+article,
+p,
+h2,
+.img-container,
+section,
+h3 {
+  background-color: rgb(238, 240, 228);
+}
+
+.bar {
+  width: 37%;
+  background-color: rgb(209, 231, 208);
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 37%;
+  margin-top: 60%;
+}
+
+p {
+  font-size: 14px;
+}
+
+.barActive {
+  height: 600px;
+  width: 300px;
   background-color: rgb(146, 177, 153);
 }
 
@@ -147,69 +207,23 @@ h2 {
   display: none;
 }
 
-.p-link {
-  background-color: rgb(146, 177, 153);
-}
-
 section {
   @include flex(center, center);
   flex-direction: column;
   margin-bottom: 70px;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: rgb(219, 221, 210);
-  }
-
+@media only screen and (min-width: 600px) {
   header,
-  h1,
-  footer,
-  .p-link,
-  .links,
-  .link,
-  .sec {
-    background-color: wheat;
+  footer {
+    background-color: rgb(187, 199, 190);
   }
 
   h1 {
-    color: black;
+    background-color: transparent;
   }
 
-  h2 {
-    font-size: 19px;
-  }
-
-  .sec {
-    color: black;
-  }
-
-  article,
-  p,
-  h2,
-  .img-container,
-  section {
-    background-color: rgb(238, 240, 228);
-  }
-
-  .bar {
-    width: 37%;
-    background-color: wheat;
-  }
-
-  img {
-    width: 100px;
-    height: 100px;
-  }
-
-  #logo {
-    width: 50px;
-    height: 50px;
-    margin-left: 37%;
-    margin-top: 60%;
-  }
-
-  p {
-    font-size: 14px;
+  .p-link {
+    background-color: rgb(187, 199, 190);
   }
 }
