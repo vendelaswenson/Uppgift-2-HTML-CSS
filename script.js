@@ -12,7 +12,6 @@ hamburgerBar.addEventListener("click", () => {
     hamburgerBar.classList.add("activeBtn");
     for (let i = 0; i < sections.length; i++)
       sections[i].style.display = "initial";
-    logo.style.display = "initial";
   } else {
     active = false;
     navBar.classList.remove("barActive");
@@ -20,6 +19,5 @@ hamburgerBar.addEventListener("click", () => {
     navBar.style.display = "none";
     for (let i = 0; i < sections.length; i++)
       sections[i].style.display = "none";
-    logo.style.display = "none";
   }
 });
